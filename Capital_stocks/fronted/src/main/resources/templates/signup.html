@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{'/css/login.css'}">
+</head>
+<body>
+
+    <div class="container">
+        <a href="#" class="btn btn-blue right-align-btn">Sign In</a>
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <div class="login-container">
+                    <h2>SIGN UP</h2>
+                    <h1 th:if="${param.error}"
+                        style="font-family: 'Poppins', sans-serif;text-align: center;font-size: 5px;">
+                        <span style="font-size:15px;color:red;"
+                              th:text="${session?.SPRING_SECURITY_LAST_EXCEPTION?.message}"></span>
+                    </h1>
+                    <h1 th:if="${param.errors}"
+                        style="font-family: 'Poppins', sans-serif;text-align: center;font-size: 5px;">
+                        <span style="font-size:15px;color:red;" th:text="${param.errors}"></span>
+                    </h1>
+                    <form id="loginForm" action="#" th:action="@{'/stocks/create'}" method="post">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" class="form-control" id="username"
+                                   placeholder="Enter username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" id="password"
+                                   placeholder="Enter password" required>
+                        </div>
+
+                        <!--                    <button type="submit" class="btn btn-primary btn-block narrow-btn" >Login</button>-->
+                        <div class="row justify-content-around mt-4">
+                            <input type="submit" id="signup" value="Sign Up" class="col-5 btn narrow-btn"/>
+                            <input type="reset" id="cancel" class="col-5 btn narrow-btn1 btn-secondary"/>
+                        </div>
+                        <p class="text-center mt-4">Already have an account? <a href="#" th:href="@{/}">Sign In here</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
