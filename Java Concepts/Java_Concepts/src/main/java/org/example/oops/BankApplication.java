@@ -3,10 +3,10 @@ package org.example.oops;
 public class BankApplication {
     public static void main(String[] args) {
         // Instantiate bank
-        Bank bank = new Bank("Global Bank", "GB001");
+        Bank bank = new Bank("Tietoevry", "TE001");
 
         // Create a transaction
-        Transaction transaction = new Transaction("TX123", 250.00);
+        Transaction transaction = new Transaction("TE123", 250.00);
 
         // Process the transaction through the bank
         bank.processTransaction(transaction);
@@ -18,10 +18,10 @@ public class BankApplication {
         System.out.println("Current balance: " + account.getBalance());
 
         // Create a bank customer
-        BankCustomer customer = new BankCustomer("CU123", "John Doe");
+        BankCustomer customer = new BankCustomer("CU123", "Arundhathi");
 
         // Create a premier customer
-        PremierCustomer premierCustomer = new PremierCustomer("PC123", "Jane Smith", 20000.00);
+        PremierCustomer premierCustomer = new PremierCustomer("PC123", "Shreyas", 20000.00);
         premierCustomer.offerPremiumService();
     }
 }
