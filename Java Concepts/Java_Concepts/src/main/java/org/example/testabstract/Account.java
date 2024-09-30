@@ -3,7 +3,7 @@ package org.example.testabstract;
 abstract class Account {
     protected double balance;
 
-    public Account(double initialBalance) {
+    protected Account(double initialBalance) {
         this.balance = initialBalance;
     }
 

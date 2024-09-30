@@ -32,5 +32,7 @@ public class IPOService implements IPOInterface {
         return ipoRemote.findById(accountId);
     }
 
-
+    private Optional<IPOApplication> status(Long account) {
+            return ipoRemote.findById(account);
+    }
 }

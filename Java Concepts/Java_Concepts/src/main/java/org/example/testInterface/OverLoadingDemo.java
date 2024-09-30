@@ -10,13 +10,13 @@ public class OverLoadingDemo {
         // Method to deposit an amount
         public void deposit(double amount) {
             balance += amount;
-            System.out.println("Deposited: $" + amount);
+            System.out.println("Deposited: " + amount);
         }
 
         // Overloaded method to deposit with an integer amount
         public void deposit(int amount) {
             balance += amount;
-            System.out.println("Deposited: $" + amount);
+            System.out.println("Deposited: " + amount);
         }
 
         // Method to get the current balance
