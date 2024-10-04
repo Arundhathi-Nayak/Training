@@ -1,7 +1,7 @@
 package org.example.oops;
 
 
-class Transaction {
+public class Transaction {
     String transactionID;
     double amount;
 
